@@ -24,6 +24,4 @@ elif [ $cmd = "cm" ]
 	done
 fi
 
-echo "Enter the branch name"
-read branch_name
-git push origin $branch_name
+git push 
