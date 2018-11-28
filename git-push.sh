@@ -5,9 +5,13 @@ read cmd
 if [ $cmd = "all" ];then
 	echo "adding all files to git"
 	git add .
-elif [ $cmd ="cm" ];then
-	while [ $cmd !="end"];do
-		echo "give /"end/" to stop adding files"
+	echo "Enter the commit message"
+	read commit_msg
+	git commit -m $"commit_msg"
+elif [ $cmd = "cm" ]
+	then
+	while [ $cmd != "end" ]
+	do
 		echo "Add file name"
 		read file
 		git add $file
@@ -15,6 +19,7 @@ elif [ $cmd ="cm" ];then
 		read commit_msg
 		git commit -m $"commit_msg"
 		echo "give end or con"
+		echo "give 'end' to stop adding files"
 		read cmd
 	done
 fi
