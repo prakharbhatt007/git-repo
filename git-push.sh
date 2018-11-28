@@ -5,4 +5,4 @@ read commit_msg
 git commit -m $commit_msg
 echo "Enter the branch name"
 read branch_name
-git "push origin $branch_name"
+git push origin $branch_name
